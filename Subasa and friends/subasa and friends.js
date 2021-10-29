@@ -1,9 +1,10 @@
 function subasaGoals(goalNum,extraTimes,goalTimes){
     //check inputs
-    if(typeof(goalNum)!='number'||typeof (extraTimes[0])!='number'||typeof (extraTimes[1])!='number')
+    if(typeof(goalNum)!='number'||typeof (extraTimes[0])!='number'||typeof (extraTimes[1])!='number'
+    ||0>goalNum>100 ||0>extraTimes>10||0>extraTimes[0]>10)
         return 'please insert correct input'
     goalTimes.map(item=>{
-        if (typeof(item)!='number')  return 'please insert correct input'
+        if (typeof(item)!='number'||0>item>100)  return 'please insert correct input'
     })
 
     //algorithm:
